@@ -9,9 +9,11 @@ import 'package:what2cocke/screens/test_temp.dart';
 void main() async {
   await dotenv.load(fileName: '.env');
   await Supabase.initialize(
-    anonKey: dotenv.env['APIKEY'].toString(),
-    url: dotenv.env['URL'].toString(),
-  );
+      anonKey: dotenv.env['APIKEY'].toString(),
+      url: dotenv.env['URL'].toString(),
+      authOptions: const FlutterAuthClientOptions(
+        authFlowType: AuthFlowType.pkce,
+      ));
 
   runApp(const ProviderScope(
     child: MyApp(),
