@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:what2cooke/providers/choise_provider.dart';
+import 'package:what2cooke/providers/choice_provider.dart';
 import 'package:what2cooke/providers/meal_provider.dart';
 import 'package:what2cooke/providers/region_provider.dart';
 import 'package:what2cooke/utils/colors.dart';
