@@ -1,12 +1,12 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:what2cocke/providers/meal_region_controler_provider.dart';
-import 'package:what2cocke/providers/meal_time_provider.dart';
-import 'package:what2cocke/utils/colors.dart';
-import 'package:what2cocke/utils/food_type_button.dart';
-import 'package:what2cocke/utils/meal_time_options.dart';
-import 'package:what2cocke/utils/what_to_eat_button.dart';
+import 'package:what2cooke/providers/meal_region_controler_provider.dart';
+import 'package:what2cooke/providers/meal_time_provider.dart';
+import 'package:what2cooke/utils/colors.dart';
+import 'package:what2cooke/utils/food_type_button.dart';
+import 'package:what2cooke/utils/meal_time_options.dart';
+import 'package:what2cooke/utils/what_to_eat_button.dart';
 
 class HomePage extends ConsumerWidget {
   const HomePage({super.key});

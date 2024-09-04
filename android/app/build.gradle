@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.what2cocke"
+    namespace = "com.example.what2cooke"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 

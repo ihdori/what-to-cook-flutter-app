@@ -1,6 +1,6 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
-import 'package:what2cocke/utils/colors.dart';
+import 'package:what2cooke/utils/colors.dart';
 
 class FoodTypeButton extends StatelessWidget {
   FoodTypeButton({

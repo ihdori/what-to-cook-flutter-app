@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:what2cocke/screens/home_page.dart';
+import 'package:what2cooke/screens/home_page.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:what2cocke/screens/result_screen.dart';
-import 'package:what2cocke/screens/test_temp.dart';
+import 'package:what2cooke/screens/result_screen.dart';
+import 'package:what2cooke/screens/test_temp.dart';
 
 void main() async {
   await dotenv.load(fileName: '.env');
@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
         // '/': (context) => HomePage(),
         'result': (context) => ResultScreen(),
       },
-      home: const HomePage(),
+      home: const TestScreen(),
     );
   }
 }
