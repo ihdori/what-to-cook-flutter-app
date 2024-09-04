@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:what2cocke/functions/random_choice.dart';
-import 'package:what2cocke/providers/meal_provider.dart';
+import 'package:what2cooke/functions/random_choice.dart';
+import 'package:what2cooke/providers/meal_provider.dart';
 
 class TestScreen extends ConsumerWidget {
   const TestScreen({super.key});
@@ -13,12 +13,12 @@ class TestScreen extends ConsumerWidget {
       body: mealData.when(
         data: (data) {
           return Center(
-            child: Container(
-                padding: EdgeInsets.all(20),
-                child: Text(' ${data[randomChoice(data)]}')),
+            child:
+                Container(padding: EdgeInsets.all(20), child: Text(' ${data}')),
           );
         },
         error: (error, stackTrace) {
+          print(error);
           return Center(child: Text(Exception(error).toString()));
         },
         loading: () {

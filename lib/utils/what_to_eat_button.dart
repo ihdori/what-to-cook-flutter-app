@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:what2cocke/utils/colors.dart';
+import 'package:what2cooke/utils/colors.dart';
 
 class WhatToEatButton extends StatelessWidget {
   const WhatToEatButton({
