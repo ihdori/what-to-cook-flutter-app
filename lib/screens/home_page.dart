@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:what2cooke/providers/meal_region_controler_provider.dart';
 import 'package:what2cooke/providers/meal_time_provider.dart';
+import 'package:what2cooke/providers/meal_time_selector_provider.dart';
 import 'package:what2cooke/utils/colors.dart';
 import 'package:what2cooke/utils/food_type_button.dart';
 import 'package:what2cooke/utils/meal_time_options.dart';
@@ -50,12 +51,21 @@ class HomePage extends ConsumerWidget {
                 isLunch: selectedMealTime.isLunchSelected,
                 dinnerChanger: () {
                   ref.read(mealTimeProvider.notifier).changeToDinner();
+                  ref
+                      .read(mealTimeSelectorProvider.notifier)
+                      .update((state) => 3);
                 },
                 lunchChanger: () {
                   ref.read(mealTimeProvider.notifier).changeToLunch();
+                  ref
+                      .read(mealTimeSelectorProvider.notifier)
+                      .update((state) => 2);
                 },
                 breakfastChanger: () {
                   ref.read(mealTimeProvider.notifier).changeToBrakFast();
+                  ref
+                      .read(mealTimeSelectorProvider.notifier)
+                      .update((state) => 1);
                 },
               ),
               const SizedBox(

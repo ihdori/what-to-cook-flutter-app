@@ -1,20 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:what2cooke/screens/home_page.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:what2cooke/screens/result_screen.dart';
 import 'package:what2cooke/screens/test_temp.dart';
 
 void main() async {
-  await dotenv.load(fileName: '.env');
-  await Supabase.initialize(
-      anonKey: dotenv.env['APIKEY'].toString(),
-      url: dotenv.env['URL'].toString(),
-      authOptions: const FlutterAuthClientOptions(
-        authFlowType: AuthFlowType.pkce,
-      ));
-
   runApp(const ProviderScope(
     child: MyApp(),
   ));
@@ -37,7 +27,7 @@ class MyApp extends StatelessWidget {
         // '/': (context) => HomePage(),
         'result': (context) => ResultScreen(),
       },
-      home: const TestScreen(),
+      home: const HomePage(),
     );
   }
 }
