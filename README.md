@@ -9,7 +9,7 @@ What to Cook is an application designed to assist mothers in reducing the confus
 
 | Home Screen |  Result Screen  |
 |:------------|:---------------:|
-![Home Screen]([https://via.placeholder.com/468x300?text=App+Screenshot+Here](https://github.com/ihdori/app_screenshots/blob/main/home_screen.jpg)) | ![Result Screen]([https://via.placeholder.com/468x300?text=App+Screenshot+Here](https://github.com/ihdori/app_screenshots/blob/main/result_screen.jpg) 
+![Home Screen]((https://github.com/ihdori/app_screenshots/blob/main/home_screen.jpg)) | ![Result Screen](https://github.com/ihdori/app_screenshots/blob/main/result_screen.jpg) 
 ## Tech Stack
 
 **Client:** Flutter, Riverpod, sqflite
