@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:what2cooke/functions/url_launcher.dart';
 
 import 'package:what2cooke/providers/choice_provider.dart';
 import 'package:what2cooke/providers/database_provider.dart';
@@ -211,14 +212,8 @@ class ResultScreen extends ConsumerWidget {
                             ),
                             MaterialButton(
                               onPressed: () {
-                                Future<void> lunchYoutubeVideo() async {
-                                  if (!await launchUrl(Uri.parse(
-                                      '${snapshot.data![choice]['video_url']}'))) {
-                                    throw Exception('Could not launch url');
-                                  }
-                                }
-
-                                lunchYoutubeVideo();
+                                lunchYoutubeVideo(
+                                    '${snapshot.data![choice]['video_url']}');
                               },
                               padding: const EdgeInsets.all(0),
                               child: DottedBorder(
