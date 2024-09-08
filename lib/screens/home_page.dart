@@ -1,6 +1,7 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:what2cooke/functions/url_launcher.dart';
 import 'package:what2cooke/providers/meal_region_controler_provider.dart';
 import 'package:what2cooke/providers/meal_time_provider.dart';
 import 'package:what2cooke/providers/meal_time_selector_provider.dart';
@@ -143,7 +144,11 @@ class HomePage extends ConsumerWidget {
                   Text('Powered By:'),
                   SizedBox(
                       width: MediaQuery.of(context).size.width / 5,
-                      child: Image.asset('images/ihdori.png')),
+                      child: GestureDetector(
+                          onTap: () {
+                            launchMyUrl('https://ihdori.dev/');
+                          },
+                          child: Image.asset('images/ihdori.png'))),
                   SizedBox(
                     height: 10,
                   ),
