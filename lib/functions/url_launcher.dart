@@ -1,6 +1,6 @@
 import 'package:url_launcher/url_launcher.dart';
 
-Future<void> lunchYoutubeVideo(String url) async {
+Future<void> launchMyUrl(String url) async {
   if (!await launchUrl(Uri.parse(url))) {
     throw Exception('Could not launch url');
   }

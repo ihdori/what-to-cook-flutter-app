@@ -212,7 +212,7 @@ class ResultScreen extends ConsumerWidget {
                             ),
                             MaterialButton(
                               onPressed: () {
-                                lunchYoutubeVideo(
+                                launchMyUrl(
                                     '${snapshot.data![choice]['video_url']}');
                               },
                               padding: const EdgeInsets.all(0),
