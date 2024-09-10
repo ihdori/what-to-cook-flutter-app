@@ -131,6 +131,29 @@ class HomePage extends ConsumerWidget {
                 height: 20,
               ),
               const WhatToEatButton(),
+              GestureDetector(
+                onTap: () {
+                  launchMyUrl('https://t.me/ihdori_bot');
+                },
+                child: Container(
+                  alignment: Alignment.center,
+                  margin: const EdgeInsets.all(20),
+                  width: MediaQuery.of(context).size.width - 160,
+                  height: 60,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(24),
+                  ),
+                  child: const Text(
+                    textDirection: TextDirection.rtl,
+                    ' أريد اقترح أكلات للتطبيق',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w400,
+                      color: orangeRed,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
           Positioned(
