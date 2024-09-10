@@ -38,9 +38,7 @@ dependencies:
   ionicons: ^0.2.2
   dotted_border: ^2.1.0
   flutter_riverpod: ^2.5.1
-  supabase_flutter: ^2.6.0
   url_launcher: ^6.3.0
-  flutter_dotenv: ^5.1.0
   sqflite: ^2.3.3+1
   cached_network_image: ^3.4.1
 
@@ -69,7 +67,6 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/what_to_cook.db
-    - .env
     - images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
