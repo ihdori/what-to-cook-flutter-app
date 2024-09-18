@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:what2cooke/screens/home_page.dart';
 import 'package:what2cooke/screens/result_screen.dart';
-import 'package:what2cooke/screens/test_temp.dart';
 
 void main() async {
   runApp(const ProviderScope(

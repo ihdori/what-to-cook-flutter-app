@@ -187,7 +187,7 @@ class HomePage extends ConsumerWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Text('Powered By:'),
+                  const Text('Powered By:'),
                   SizedBox(
                       width: MediaQuery.of(context).size.width / 5,
                       child: GestureDetector(
@@ -195,10 +195,10 @@ class HomePage extends ConsumerWidget {
                             launchMyUrl('https://ihdori.dev/');
                           },
                           child: Image.asset('images/ihdori.png'))),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Text(
+                  const Text(
                     textAlign: TextAlign.center,
                     '© جميع الحقوق محفوظة ',
                     style: TextStyle(fontSize: 10),

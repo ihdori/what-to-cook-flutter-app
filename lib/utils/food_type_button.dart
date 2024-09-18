@@ -22,9 +22,9 @@ class FoodTypeButton extends StatelessWidget {
       },
       child: DottedBorder(
         color: isSelected ? orangeRed : gray,
-        borderPadding: EdgeInsets.all(1),
-        dashPattern: [6, 2],
-        radius: Radius.circular(12),
+        borderPadding: const EdgeInsets.all(1),
+        dashPattern: const [6, 2],
+        radius: const Radius.circular(12),
         borderType: BorderType.RRect,
         child: Container(
           alignment: Alignment.center,

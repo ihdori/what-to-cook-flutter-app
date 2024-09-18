@@ -64,9 +64,6 @@ class ResultScreen extends ConsumerWidget {
                       myData = List.from(
                           snapshot.data!); // Create a copy of the data
                       myData!.shuffle(); // Shuffle the copied list
-
-                      print(
-                          '+++++++++++++++++++++++++++++++++++++++++++++++++');
                     }
 
                     return SafeArea(
@@ -165,7 +162,7 @@ class ResultScreen extends ConsumerWidget {
                                           textDirection: TextDirection.rtl,
                                           textAlign: TextAlign.center,
                                         ),
-                                        content: Container(
+                                        content: SizedBox(
                                           height: MediaQuery.of(context)
                                                   .size
                                                   .height /

@@ -21,7 +21,7 @@ class WhatToEatButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(24),
             gradient: const LinearGradient(colors: [
               turquois,
-              const Color.fromARGB(255, 35, 133, 121),
+              Color.fromARGB(255, 35, 133, 121),
             ])),
         child: const Text(
           textDirection: TextDirection.rtl,

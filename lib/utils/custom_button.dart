@@ -22,10 +22,10 @@ class CustomButton extends StatelessWidget {
       onPressed: () {
         onPressed();
       },
-      padding: EdgeInsets.all(0),
+      padding: const EdgeInsets.all(0),
       child: Container(
-        margin: EdgeInsets.symmetric(vertical: 8),
-        padding: EdgeInsets.symmetric(horizontal: 100),
+        margin: const EdgeInsets.symmetric(vertical: 8),
+        padding: const EdgeInsets.symmetric(horizontal: 100),
         alignment: Alignment.center,
         height: 50,
         width: MediaQuery.of(context).size.width - 40,
