@@ -133,7 +133,7 @@ class HomePage extends ConsumerWidget {
               const WhatToEatButton(),
               GestureDetector(
                 onTap: () {
-                  launchMyUrl('https://t.me/ihdori_bot');
+                  launchMyUrl('https://forms.gle/ytrm9TT6sww5GjMb8');
                 },
                 child: Container(
                   alignment: Alignment.center,
@@ -145,7 +145,7 @@ class HomePage extends ConsumerWidget {
                   ),
                   child: const Text(
                     textDirection: TextDirection.rtl,
-                    ' أريد اقترح أكلات للتطبيق',
+                    ' أريد اقترح وجبات للتطبيق',
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w400,
@@ -154,6 +154,29 @@ class HomePage extends ConsumerWidget {
                   ),
                 ),
               ),
+              // GestureDetector(
+              //   onTap: () {
+              //     launchMyUrl('https://forms.gle/ytrm9TT6sww5GjMb8');
+              //   },
+              //   child: Container(
+              //     alignment: Alignment.center,
+              //     // margin: const EdgeInsets.all(10),
+              //     width: MediaQuery.of(context).size.width - 160,
+              //     height: 22,
+              //     decoration: BoxDecoration(
+              //       borderRadius: BorderRadius.circular(24),
+              //     ),
+              //     child: const Text(
+              //       textDirection: TextDirection.rtl,
+              //       'التواصل مع الـمطور',
+              //       style: TextStyle(
+              //         fontSize: 16,
+              //         fontWeight: FontWeight.w400,
+              //         color: gray,
+              //       ),
+              //     ),
+              //   ),
+              // ),
             ],
           ),
           Positioned(

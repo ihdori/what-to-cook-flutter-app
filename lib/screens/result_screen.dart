@@ -4,9 +4,7 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ionicons/ionicons.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:what2cooke/functions/url_launcher.dart';
-
 import 'package:what2cooke/providers/choice_provider.dart';
 import 'package:what2cooke/providers/database_provider.dart';
 import 'package:what2cooke/providers/meal_time_selector_provider.dart';
@@ -26,6 +24,8 @@ String selectionQuery(region, time) {
             ;
             ''';
 }
+
+List<Map<String, dynamic>>? myData;
 
 class ResultScreen extends ConsumerWidget {
   const ResultScreen({super.key});
@@ -58,6 +58,16 @@ class ResultScreen extends ConsumerWidget {
                   }
                   if (snapshot.connectionState == ConnectionState.done) {
                     final choice = ref.watch(choiceProvider);
+                    // Here I made new List from the originall data then I modifies the copied list to be in random order
+                    if (myData == null ||
+                        myData!.length != snapshot.data!.length) {
+                      myData = List.from(
+                          snapshot.data!); // Create a copy of the data
+                      myData!.shuffle(); // Shuffle the copied list
+
+                      print(
+                          '+++++++++++++++++++++++++++++++++++++++++++++++++');
+                    }
 
                     return SafeArea(
                         child: Stack(
@@ -85,7 +95,7 @@ class ResultScreen extends ConsumerWidget {
                               ),
                             ),
                             Text(
-                              '${snapshot.data![choice]['meal_name']}',
+                              '${myData![choice]['meal_name']}',
                               textDirection: TextDirection.rtl,
                               style: const TextStyle(
                                 fontSize: 48,
@@ -107,8 +117,7 @@ class ResultScreen extends ConsumerWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(16),
                                 child: CachedNetworkImage(
-                                  imageUrl:
-                                      '${snapshot.data![choice]['image_url']}',
+                                  imageUrl: '${myData![choice]['image_url']}',
                                   imageBuilder: (context, imageProvider) =>
                                       Container(
                                     decoration: BoxDecoration(

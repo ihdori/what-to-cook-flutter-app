@@ -11,6 +11,46 @@ class TestScreen extends ConsumerWidget {
     final mealData = ref.watch(databaseProvider);
     int n = 2;
     return Scaffold(
+      appBar: AppBar(),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            UserAccountsDrawerHeader(
+              accountName: Text('User Name'),
+              accountEmail: Text('user@example.com'),
+              currentAccountPicture: CircleAvatar(
+                backgroundColor: Colors.orange,
+                child: Text('U'),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('Home'),
+              onTap: () {
+                Navigator.pop(context); // Close the drawer
+                // Navigate to home or perform an action
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text('Settings'),
+              onTap: () {
+                Navigator.pop(context); // Close the drawer
+                // Navigate to settings or perform an action
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.logout),
+              title: Text('Logout'),
+              onTap: () {
+                Navigator.pop(context); // Close the drawer
+                // Perform logout action
+              },
+            ),
+          ],
+        ),
+      ),
       body: mealData.when(data: (data) {
         return FutureBuilder(
             future: data.rawQuery('''
